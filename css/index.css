@@ -1,0 +1,839 @@
+/*****顶部菜单定位*****/
+
+.header-location {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: #fff;
+    box-shadow: 0 2px 8px 0 rgba(27, 31, 64, .10);
+    top: 0;
+    min-width: 1200px;
+    z-index: 1000;
+}
+
+.header-location .logo {
+    display: inline-block;
+    width: 180px;
+    padding: 0 28px;
+}
+
+.header-location .menu-list {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 200px;
+}
+
+.header-location .menu-list .menu-item {
+    font-size: 14px;
+    color: #333;
+    padding: 0 8px;
+    position: relative;
+}
+.header-location .menu-list .menu-item:after{
+	content: "";
+	height: 3px;
+	background: #10a5f1;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	right: 50%;
+	transition: all 0.4s;
+}
+.header-location .menu-list .menu-item.menu-active>a {
+    border-bottom: 3px solid #10a5f1;
+    color: #10a5f1;
+}
+ .header-location .menu-list .menu-item:hover:after{
+	left: 0px;
+	right: 0px;
+} 
+.header-location .menu-list .menu-item:hover ul.menu-item-sub{
+	display: block;
+}
+
+.header-location .menu-list .menu-item a {
+    display: inline-block;
+    padding: 0 10px;
+    height: 54px;
+    line-height: 54px;
+    border-bottom: 3px solid #fff;
+}
+
+.header-location .menu-list .menu-item .nav-cont {
+    position: absolute;
+    top: 60px;
+    text-align: left;
+    padding-bottom: 10px;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    width: 226px;
+    background: #fff;
+    padding-left: 20px;
+    box-shadow: 0 2px 8px 0 rgba(27, 31, 64, .10);
+    border-top: 1px solid hsla(0, 0%, 100%, .1);
+    margin-left: -20px;
+    display: none;
+}
+
+.header-location .menu-list .menu-item .nav-cont .nav-full {
+    width: 112px;
+    line-height: 36px;
+}
+
+.header-location .label {
+    width: 152px;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    right:20px;
+}
+
+.header-location .label:hover a img {
+    transition: all 0.5s ease;
+    transform: rotate(180deg);
+}
+
+.header-location .label:hover .label-enter {
+    color: #10a5f1;
+}
+
+.header-location .label:hover .label-cont {
+    height: 80px;
+    transition: all 0.5s ease;
+}
+
+.header-location .label .label-enter {
+    padding-left: 26px;
+    background: url(../images/earth.png) no-repeat left center;
+    color: #999;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.header-location .label .label-enter a {
+    padding-left: 5px;
+}
+
+.header-location .label .label-cont {
+    position: absolute;
+    top: 60px;
+    text-align: left;
+    /* padding-bottom: 10px; */
+    z-index: 9999;
+    left: 0;
+    right: 10px;
+    width: 170px;
+    background: #fff;
+    box-shadow: 0 2px 8px 0 rgba(27, 31, 64, .10);
+    /* border-top: 1px solid hsla(0, 0%, 100%, .1); */
+    /* max-height: 320px; */
+    font-size: 14px;
+    color: #999;
+    box-sizing: border-box;
+    height: 0;
+    overflow: hidden;
+}
+
+.header-location .label .label-cont .label-full {
+    width: 100%;
+    line-height: 36px;
+    text-align: center;
+}
+
+.header-location .label .label-cont .label-full:hover {
+    cursor: pointer;
+    transition: all 1s ease;
+    background: #10a5f1;
+    color: #fff;
+}
+.header-location .mater{ 
+    width: 60px;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+.header-location .mater a{ color: #999;}
+.header-location .mater a:hover{ color: #10a5f1;}
+
+/* 顶部下拉菜单 */
+.menu-item-sub{
+	background: #171717;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	padding: 20px 40px;
+	padding-left: 320px;
+	box-sizing: border-box;
+	max-height: 560px;
+	display: none;
+}
+.menu-item-sub .menu-sub-item{
+	float:left;
+	margin-right:30px;
+	box-sizing: border-box;
+	width: 220px;
+}
+.menu-item-sub .menu-sub-item .sub-list-title{
+	color: #fff;
+	font-size: 16px;
+	padding:5px 10px;
+	box-sizing: border-box;
+
+}
+.menu-item-sub .menu-sub-item .sub-list-title a{
+	color: #fff;
+	border: none;
+	height: auto;
+	line-height: none;
+	padding: 0;
+	line-height: normal;
+}
+.menu-item-sub .menu-sub-item .sub-list-title a:hover{
+	color: #10a5f1;
+	margin-left: 10px;
+	transition: all ease 0.5s;
+}
+.menu-item-sub .menu-sub-item .sub-list-container .sub-list-item a{
+	color: #fff;
+	border: none;
+	height: auto;
+	line-height: none;
+}
+.menu-item-sub .menu-sub-item .sub-list-container .sub-list-item{
+	text-align: left;
+	line-height: 42px;
+	width: 180px;
+}
+.menu-item-sub .menu-sub-item .sub-list-container .sub-list-item a:hover{
+	color: #10a5f1;
+	margin-left: 10px;
+	transition: all ease 0.5s;
+}
+.menu-item-technology{
+	position: absolute;
+	width: 151%;
+	padding: 10px;
+}
+.menu-item-technology .menu-sub-item{
+	float: none;
+	margin: 0;
+	width: 100%;
+	text-align: center;
+	line-height: 43px;
+}
+.menu-item-technology .menu-sub-item .sub-list-title{
+	padding: 0;
+}
+
+
+
+
+
+.banner {
+    width: 100%;
+    height: 615px;
+    margin-top: 52px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .swiper {
+    width: 5720px;
+    position: absolute;
+    transition: 1s;
+    left: 0;
+    top: 0;
+    font-size: 0;
+}
+
+.banner .swiper img {
+    width: 1903px;
+    height: auto;
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.banner .circle {
+    overflow: hidden;
+    padding: 5px;
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    box-sizing: border-box;
+}
+
+.banner .circle li {
+    width: 15px;
+    height: 15px;
+    border: 3px solid #fff;
+    float: left;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.banner .circle li.current {
+    background: #fff;
+}
+
+.banner .circle li:hover {
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+
+.banner #prev {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    display: inline-block;
+}
+
+.banner #next {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    display: inline-block;
+}
+
+
+/**玺瑞云智慧物联网平台**/
+
+.iot-container {
+    width: 100%;
+    padding: 80px 0;
+    background: #f6faf9;
+}
+
+.iot-container .iot-title {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 36px;
+    color: #333;
+}
+
+.iot-container .iot-main {
+    text-align: center;
+    padding: 30px 0 16px;
+    position: relative;
+    z-index: 9;
+}
+
+.iot-container .iot-posit {
+    position: absolute;
+    padding: 8px 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px 0 rgba(27, 31, 64, .10);
+    border-radius: 3px;
+    text-align: left;
+    max-width: 320px;
+    cursor: pointer;
+}
+
+.iot-container .iot-posit:hover .posi-title {
+    color: #10a5f1;
+}
+
+.iot-container .iot-posit:hover .iot-active {
+    display: inline-block;
+    z-index: 999;
+}
+
+.iot-container .iot-posit .posi-title {
+    font-size: 18px;
+    line-height: 32px;
+    color: #333;
+}
+
+.iot-container .iot-posit .iot-active {
+    font-size: 14px;
+    color: #888;
+    line-height: 24px;
+    display: none;
+    z-index: 999;
+}
+
+.iot-container .iot-biometrics {
+    top: 206px;
+    right: 900px;
+    z-index: 1;
+}
+
+.iot-container .iot-biometrics .posi-title {
+    text-align: right;
+}
+
+.iot-container .iot-robot {
+    top: 396px;
+    right: 920px;
+    z-index: 1;
+}
+
+.iot-container .iot-robot .posi-title {
+    text-align: right;
+}
+
+.iot-container .iot-date {
+    top: 536px;
+    right: 788px;
+}
+
+.iot-container .iot-date .posi-title {
+    text-align: right;
+}
+
+.iot-container .iot-scene {
+    top: 222px;
+    left: 900px;
+    z-index: 1;
+}
+
+.iot-container .iot-intel {
+    top: 380px;
+    left: 900px;
+}
+
+.iot-container .iot-rfid {
+    top: 510px;
+    left: 782px;
+}
+
+
+/**打造行业领先价值**/
+
+.industry-value {
+    padding: 80px 0;
+    width: 1260px;
+}
+.industry-value .industry-box{
+	margin-top: 64px;
+}
+.industry-value .industry-title {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 36px;
+    color: #333;
+}
+
+
+.industry-value .industry-list {
+    width: 235px;
+    position: relative;
+    transition: all .3s;
+    overflow: hidden;
+    text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
+	margin:0 40px;
+}
+.industry-value .industry-list .biankuan{
+	width: 3px;
+	height:3px;
+	position: absolute;
+}
+.industry-value .industry-list:hover .biankuang_1{
+	top: 0;
+	width: 100%;
+	left: 0;
+	transition: all ease .5s;
+	background: #10a5f1;
+}
+.industry-value .industry-list:hover .biankuang_2{
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	transition: all ease .5s;
+	background: #10a5f1;
+}
+.industry-value .industry-list:hover .biankuang_3{
+	top: 0;
+	height: 100%;
+	right: 0;
+	transition: all ease .5s;
+	background: #10a5f1;
+}
+.industry-value .industry-list:hover .biankuang_4{
+	right: 0;
+	width: 100%;
+	bottom: 0;
+	transition: all ease .5s;
+	background: #10a5f1;
+}
+
+.industry-value .industry-list .industry-img>img {
+    vertical-align: middle;
+    transition: all .3s;
+}
+
+.industry-value .industry-list .industry-img>span {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    height: 100%;
+    transition: all .3s;
+    opacity: 0;
+}
+
+.industry-value .industry-list .industry-title {
+    font-size: 22px;
+    color: #333;
+    line-height: 60px;
+    transition: all .3s;
+}
+
+.industry-value .industry-list .industry-active {
+    font-size: 14px;
+    color: #666;
+    line-height: 24px;
+    padding-top: 8px;
+    transition: all .3s;
+}
+
+.industry-value .industry-list:hover {
+    cursor: pointer;
+}
+
+.industry-value .industry-list:hover .industry-img>img {
+    opacity: 0;
+}
+
+.industry-value .industry-list:hover .industry-img>span {
+    opacity: 1;
+}
+
+.industry-value .industry-list:hover .industry-title {
+    color: #10a5f1;
+}
+
+.industry-value .industry-list:hover .industry-active {
+    color: #10a5f1;
+}
+
+
+/**应用场景**/
+
+.scene {
+    width: 100%;
+    padding: 80px 0;
+    background: #f5f5f5;
+}
+
+.scene-box {
+    transition: all .3s;
+}
+
+.scene-box .scene-title {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 36px;
+    color: #333;
+    padding-bottom: 60px;
+}
+
+.scene-box .scene-main {
+    width: 100%;
+    height: 406px;
+	position: relative;
+	overflow: hidden;
+}
+.scene-box .scene-main .solution-box{
+	width: 2001px;
+	
+}
+.scene-box .scene-main .solution-box ul{
+ float:left;
+}
+
+.scene-box .scene-main:hover .solution-left{
+	display: block;
+}
+.scene-box .scene-main:hover .solution-right{
+	display: block;
+}
+.scene-box .scene-main .solution-left{
+	position: absolute;
+	left: 16px;
+	top:38%;
+	cursor: pointer;
+	display: none;
+	z-index: 999;
+}
+.scene-box .scene-main .solution-right{
+	position: absolute;
+	right: 16px;
+	top: 38%;
+	cursor: pointer;
+	display: none;
+	z-index: 999;
+}
+.scene-box .scene-main .solution-left img{
+	width: 50px;
+}
+.scene-box .scene-main .solution-right img{
+	width: 50px;
+}
+
+.scene-box .scene-list {
+    width: 370px;
+    height: 406px;
+    background: #fff;
+    box-shadow: 0 2px 8px 0 rgba(27, 31, 64, .05);
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+/* .scene-box .scene-list:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.scene-box .scene-list:hover .scene-list-img {
+    height: 80px;
+    transition: all 0.5s ease;
+}
+
+.scene-box .scene-list:hover .scene-list-active {
+    overflow: visible;
+}
+ */
+.scene-box .scene-list .scene-list-img {
+    width: 370px;
+    height: 256px;
+    overflow: hidden;
+}
+
+.scene-box .scene-list .scene-list-img img {
+    width: 370px;
+    height: 256px;
+}
+
+.scene-box .scene-list .scene-list-tit {
+    font-size: 18px;
+    line-height: 32px;
+    padding: 12px 16px 5px;
+    color: #333;
+}
+
+.scene-box .scene-list .scene-list-active {
+    font-size: 14px;
+    line-height: 28px;
+    color: #666;
+    padding: 0 16px 6px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.scene-box .scene-more {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background: #fff;
+    margin: 50px auto 0;
+    font-size: 18px;
+    color: #666;
+}
+
+.scene-box .scene-more img {
+    margin-left: 16px;
+}
+
+
+/**方案与常识**/
+
+.plan-sense {
+    padding: 60px 0 30px;
+}
+
+.plan-sense .plan-title {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 36px;
+    color: #333;
+    padding-bottom: 60px;
+}
+
+.plan-sense .plan-box {
+    height: 430px;
+}
+
+.plan-sense .plan-box-left {
+    width: 370px;
+    margin-right: 40px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.plan-sense .plan-box-left:hover img {
+    transform: scale(1.2);
+    transition: all 1s ease;
+}
+
+.plan-sense .plan-box-right {
+    width: 790px;
+}
+
+.plan-sense .plan-box-right .new {
+    height: 96px;
+    width: 730px;
+    padding: 15px 30px;
+    background: #f5f5f5;
+    margin-top: 25px;
+}
+
+.plan-sense .plan-box-right .new-first {
+    margin-top: 0;
+}
+
+.plan-sense .plan-box-right .new .new-tit {
+    font-size: 16px;
+    color: #333;
+    line-height: 42px;
+}
+
+.plan-sense .plan-box-right .new .new-active {
+    font-size: 14px;
+    line-height: 28px;
+    color: #666;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+
+/**合作伙伴**/
+
+.parter {
+    width: 100%;
+    padding: 80px 0;
+    background: #f5f5f5;
+}
+
+.parter .parter-tit {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 36px;
+    color: #333;
+}
+
+.parter .parter-main {
+    margin-top: 10px;
+}
+
+.parter .parter-main li {
+    margin: 40px 0 0 30px;
+    width: 215px;
+    height: 82px;
+}
+
+.parter .parter-main li img {
+    width: 215px;
+    height: 82px;
+}
+
+.parter .parter-main li:nth-child(5n+1) {
+    margin-left: 0;
+}
+
+
+/**底部信息**/
+
+.foot {
+    padding: 40px 0;
+    width: 100%;
+    background: #1c2a40;
+}
+
+.foot-box .foot-left {
+    width: 300px;
+    padding-right: 100px;
+    border-right: 1px solid #2b4e86;
+}
+
+.foot-box .foot-logo {
+    padding-bottom: 30px;
+}
+
+.foot-box .foot-active {
+    line-height: 30px;
+    font-size: 14px;
+    color: #bec9d6;
+}
+
+.foot-box .foot-center {
+    padding: 0 60px;
+}
+
+.foot-box .foot-center a {
+    color: #bec9d6;
+}
+
+.foot-box .foot-list {
+    width: 126px;
+    margin: 0 20px;
+}
+
+.foot-box .foot-center .foot-tit {
+    font-size: 18px;
+    line-height: 32px;
+    padding-bottom: 6px;
+}
+
+.foot-box .foot-center .foot-li li {
+    line-height: 26px;
+    font-size: 14px;
+}
+
+.foot-box .foot-center .foot-li li:hover {
+    cursor: pointer;
+    padding-left: 10px;
+    transition: all 0.5s ease;
+}
+
+.foot-box .foot-center .foot-li li:hover a {
+    color: #10a5f1;
+}
+
+.foot-box .foot-right {
+    text-align: center;
+}
+.foot-box .foot-right .guanzhu{ width: 92px; padding: 0 10px;}
+.foot-box .foot-right .guanzhu img{ width: 82px; height: 82px;}
+.foot-box .foot-right span {
+    display: inline-block;
+    padding-top: 16px;
+    font-size: 14px;
+    color: #bec9d6;
+}
+
+.record {
+    width: 100%;
+    height: 42px;
+    background: #162132;
+}
+
+.record .record-box {
+    line-height: 42px;
+    text-align: center;
+    color: #bec9d6;
+    font-size: 14px;
+}

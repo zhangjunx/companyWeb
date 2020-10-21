@@ -1,0 +1,15 @@
+.middle{ text-align: center;}
+.pro-img{ width: 502px;}
+.pro-img .pro-picture{ width: 480px;  height: 480px; border: 1px solid #ddd;display: table-cell;vertical-align: middle;}
+.pro-img .pro-picture img{ max-width: 430px; text-align: center;}
+.nology-box{ width: 630px; margin-left: 60px;}
+
+
+.pro-img .pro-tit{ font-size: 24px; color: #0094df; line-height: 40px;}
+.pro-img .pro-model{font-size: 16px; color: #666; line-height: 30px;}
+.nology-title {
+    line-height:52px;
+    font-size: 24px;
+    color: #333;
+    background: url(../images/solution_product_bg.png) no-repeat left bottom; 
+}
